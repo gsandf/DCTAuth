@@ -219,11 +219,6 @@ static const struct DCTOAuth2AccountProperties DCTOAuth2AccountProperties = {
 		[items addObject:item];
 	}
 
-	if (clientSecret) {
-		DCTAuthContentItem *item = [[DCTAuthContentItem alloc] initWithName:DCTOAuth2Keys.clientSecret value:clientSecret];
-		[items addObject:item];
-	}
-
 	if (self.shouldSendCallbackURL && callback) {
 		DCTAuthContentItem *item = [[DCTAuthContentItem alloc] initWithName:DCTOAuth2Keys.redirectURI value:callback];
 		[items addObject:item];
